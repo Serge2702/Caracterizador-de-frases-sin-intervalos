@@ -6,14 +6,14 @@
 ;Variables y constantes de los archivos;{{{
 ;================================================================================
 
-(if (not (boundp 'dir_patrones))  (defconstant dir_patrones  "Patrones por Pieza/"))
-(if (not (boundp 'dir_bach))      (defconstant dir_bach      "Patrones por Pieza/Bach/"))
-(if (not (boundp 'dir_mozart))    (defconstant dir_mozart    "Patrones por Pieza/Mozart/"))
-(if (not (boundp 'dir_muzio))     (defconstant dir_muzio     "Patrones por Pieza/Muzio/"))
-(if (not (boundp 'dir_beethoven)) (defconstant dir_beethoven "Patrones por Pieza/Beethoven/"))
-(if (not (boundp 'dir_chopin))    (defconstant dir_chopin    "Patrones por Pieza/Chopin/"))
-(if (not (boundp 'dir_debussy))   (defconstant dir_debussy   "Patrones por Pieza/Debussy/"))
-(if (not (boundp 'dir_joplin))    (defconstant dir_joplin    "Patrones por Pieza/Joplin/"))
+(if (not (boundp 'dir_patrones))  (defconstant dir_patrones  "Patrones_por_frase/"))
+(if (not (boundp 'dir_bach))      (defconstant dir_bach      "Patrones_por_frase/Bach/"))
+(if (not (boundp 'dir_mozart))    (defconstant dir_mozart    "Patrones_por_frase/Mozart/"))
+(if (not (boundp 'dir_muzio))     (defconstant dir_muzio     "Patrones_por_frase/Muzio/"))
+(if (not (boundp 'dir_beethoven)) (defconstant dir_beethoven "Patrones_por_frase/Beethoven/"))
+(if (not (boundp 'dir_chopin))    (defconstant dir_chopin    "Patrones_por_frase/Chopin/"))
+(if (not (boundp 'dir_debussy))   (defconstant dir_debussy   "Patrones_por_frase/Debussy/"))
+(if (not (boundp 'dir_joplin))    (defconstant dir_joplin    "Patrones_por_frase/Joplin/"))
 
 (defparameter *considerar* (list dir_bach dir_mozart dir_muzio dir_beethoven dir_debussy dir_joplin))
 ;}}}
