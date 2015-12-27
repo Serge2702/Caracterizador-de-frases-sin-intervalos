@@ -1,6 +1,6 @@
 #!/bin/bash
 # Este script es para determinar los mejores valores de alfa y beta para la
-# caracterización de las piezas.
+# caracterización de las frases
 
 while read linea
 do
@@ -8,5 +8,5 @@ do
     beta=$(echo $linea | cut -f2 -d' ')
     echo "================================================================================"
     echo "alfa: $alfa y beta: $beta"
-    sbcl --script "Script_caracterizador_de_piezas.lisp" $alfa $beta
-done < "Archivos_mascaras/Pares_de_numeros.txt"
+    sbcl --script "Script_caracterizador.lisp" $alfa $beta
+done < "$1"
