@@ -17,16 +17,16 @@
 (setq *supervision* (mapcar #'concatena_grupos *armadura* *tonos* *num_notas* *relaciones* *octavas* *ambito*))
 
 ;; Esto es para cuando se ejecuta esto como script de caracterización;{{{
-(defvar mask-file (second *posix-argv*))
-(defvar alpha (read-from-string (third *posix-argv*)))
-(defvar beta (read-from-string (fourth *posix-argv*)))
+;(defvar mask-file (second *posix-argv*))
+(defvar alpha (read-from-string (second *posix-argv*)))
+(defvar beta (read-from-string (third *posix-argv*)))
 (defvar nombre_archivo_salida (concatenate 'string (third *posix-argv*) "_" (fourth *posix-argv*) "-" (second *posix-argv*)".txt"))
 
 (caracteriza_nuevo 
   *supervision* 
-  (concatenate 'string "~/Documentos/Maestría/5to_Semestre/Máscaras/" mask-file) 
+  (concatenate 'string "Archivos_mascaras/" "40_3.lisp") 
   alpha beta beta alpha 700 
-  (concatenate 'string "~/Documentos/Maestría/5to_Semestre/Resultados/Corregidos/" nombre_archivo_salida) );}}}
+  (concatenate 'string "Resultados caracterizador/" nombre_archivo_salida));}}}
 
 ;;;;Esta sección está "hardcodeada" por que es para pruebas;{{{
 ;(caracteriza_nuevo 
