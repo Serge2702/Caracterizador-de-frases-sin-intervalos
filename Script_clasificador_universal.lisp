@@ -5,12 +5,15 @@
 (defvar archivo_caracteristicas (concatenate 'string "Resultados_de_prueba/" nombre_archivo))
 
 (cond
-  ((equal nombre_archivo "Resultados_caracterizador/25_-100.txt")
-   (defparameter *conteo_caracteristicas*
-     (list (list 207 0)(list 1 0)(list 47 0)(list 94 0)(list 46 0)(list 153 72))))
   ((equal nombre_archivo "Resultados_caracterizador/25_-50.txt")
    (defparameter *conteo_caracteristicas*
      (list (list 2698 60)(list 67 2)(list 2064 8)(list 694 13)(list 421 43)(list 1975 262))))
+  ((equal nombre_archivo "Resultados_caracterizador/40_-80.txt")
+   (defparameter *conteo_caracteristicas*
+     (list (list 726 3)(list 20 25)(list 662 0)(list 240 0)(list 136 1)(list 703 199))))
+  ((equal nombre_archivo "Resultados_caracterizador/25_-100.txt")
+   (defparameter *conteo_caracteristicas*
+     (list (list 207 0)(list 1 0)(list 47 0)(list 94 0)(list 46 0)(list 153 72))))
   ((equal nombre_archivo "Resultados_caracterizador/25_-60.txt")
    (defparameter *conteo_caracteristicas*
      (list (list 1634 22)(list 26 0)(list 865 0)(list 319 5)(list 202 6)(list 1172 193))))
@@ -233,9 +236,6 @@
   ((equal nombre_archivo "Resultados_caracterizador/40_-110.txt")
    (defparameter *conteo_caracteristicas*
      (list (list 249 0)(list 2 9)(list 164 0)(list 100 0)(list 48 0)(list 172 108))))
-  ((equal nombre_archivo "Resultados_caracterizador/40_-80.txt")
-   (defparameter *conteo_caracteristicas*
-     (list (list 726 3)(list 20 25)(list 662 0)(list 240 0)(list 136 1)(list 703 199))))
   ((equal nombre_archivo "Resultados_caracterizador/40_-90.txt")
    (defparameter *conteo_caracteristicas*
      (list (list 431 2)(list 9 22)(list 399 0)(list 191 0)(list 92 0)(list 412 168))))
