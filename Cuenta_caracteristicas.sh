@@ -2,7 +2,7 @@
 # Cuenta las características de todas las propiedades encontradas que están en
 # la carpeta de resultados.
 
-for archivo in Resultados/*
+for archivo in Resultados_caracterizador/*.txt
 do
 a1=$(grep "(0 +)" $archivo | wc -l)
 a2=$(grep "(0 -)" $archivo | wc -l)
