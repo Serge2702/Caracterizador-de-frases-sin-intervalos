@@ -336,4 +336,5 @@
         (format t "~%Grupo ~S~%" contador)
         (loop for pieza across grupo do
               (setq temporal (pertenencias_del_patron nombre_archivo pieza))
-              (format t "~S - ~S~%" temporal (indice_max temporal)))))
+              (format t "~S - ~S~%" temporal (indice_max temporal)))
+        (setq contador (+ contador 1))))

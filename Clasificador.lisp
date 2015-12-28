@@ -3,7 +3,7 @@
 ;;;clasificación de los patrones usando las características obtenidas
 ;;;anteriormente
 (load "Caracterizador_nuevo.lisp")
-(load "Script_caracterizador_de_piezas.lisp")
+(load "Script_caracterizador.lisp")
 (load "Cobertura.lisp")
 
 (defun caracteristicas_del_patron (archivo patron)
