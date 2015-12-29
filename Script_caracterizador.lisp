@@ -15,6 +15,7 @@
 (setq *num_notas* (suma_cola_todo (carga_tipo_archivo "Repeticiones_Num_Notas.txt") 4))
 
 (setq *supervision* (mapcar #'concatena_grupos *armadura* *tonos* *num_notas* *relaciones* *octavas* *ambito*))
+(print *supervision*)
 
 ;;; Esto es para cuando se ejecuta esto como script de caracterización;{{{
 ;;(defvar mask-file (second *posix-argv*))
