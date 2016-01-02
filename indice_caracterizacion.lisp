@@ -52,3 +52,7 @@
             (t nil)))
     salida))
 
+(defun resta_ (argumentos)
+;Descripción
+  
+  )
