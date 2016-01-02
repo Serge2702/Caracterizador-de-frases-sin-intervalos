@@ -5,7 +5,10 @@
 (defvar archivo_caracteristicas (concatenate 'string "Resultados_de_prueba/" nombre_archivo))
 
 (cond
-  ((equal nombre_archivo "Resultados_caracterizador/25_-50.txt")
+  ((equal nombre_archivo "Resultados_caracterizador/10-0.txt")
+   (defparameter *conteo_caracteristicas*
+     (list (list 15012 2357)(list 657 0)(list 14114 212)(list 10323 616)(list 58912 397)(list 6404 552))))
+  ((equal nombre_archivo "Resultados_caracterizador/50-25.txt")
    (defparameter *conteo_caracteristicas*
      (list (list 2698 60)(list 67 2)(list 2064 8)(list 694 13)(list 421 43)(list 1975 262))))
   ((equal nombre_archivo "Resultados_caracterizador/40_-80.txt")

@@ -15,19 +15,19 @@
 (setq *num_notas* (suma_cola_todo (carga_tipo_archivo "Repeticiones_Num_Notas.txt") 4))
 
 (setq *supervision* (mapcar #'concatena_grupos *armadura* *tonos* *num_notas* *relaciones* *octavas* *ambito*))
-(print *supervision*)
+;(print *supervision*)
 
 ;;; Esto es para cuando se ejecuta esto como script de caracterización;{{{
 ;;(defvar mask-file (second *posix-argv*))
 ;(defvar alpha (read-from-string (second *posix-argv*)))
 ;(defvar beta (read-from-string (third *posix-argv*)))
-;(defvar nombre_archivo_salida (concatenate 'string (third *posix-argv*) "_" (fourth *posix-argv*) "-" (second *posix-argv*)".txt"))
+;(defvar nombre_archivo_salida (concatenate 'string (second *posix-argv*) "-" (third *posix-argv*) ".txt"))
 
 ;(caracteriza_nuevo 
   ;*supervision* 
   ;(concatenate 'string "Archivos_mascaras/" "40_3.lisp") 
   ;alpha beta beta alpha 700 
-  ;(concatenate 'string "Resultados caracterizador/" nombre_archivo_salida));}}}
+  ;(concatenate 'string "Resultados_caracterizador/" nombre_archivo_salida));}}}
 
 ;;;;Esta sección está "hardcodeada" por que es para pruebas;{{{
 ;(caracteriza_nuevo 
