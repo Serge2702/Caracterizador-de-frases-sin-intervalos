@@ -137,6 +137,7 @@ Resultados_caracterizador/60-29.txt
 Resultados_caracterizador/60-30.txt
 127,809,280,236,202,1005,
 Resultados_caracterizador/6-0.txt
+127,1634,281,255,209,1011,
 Resultados_caracterizador/70-25.txt
 127,433,275,223,162,989,
 Resultados_caracterizador/70-26.txt
@@ -160,6 +161,7 @@ Resultados_caracterizador/70-34.txt
 Resultados_caracterizador/70-35.txt
 127,884,280,240,201,998,
 Resultados_caracterizador/7-0.txt
+127,1617,281,255,209,1011,
 Resultados_caracterizador/80-25.txt
 126,317,216,202,138,973,
 Resultados_caracterizador/80-26.txt
@@ -193,6 +195,7 @@ Resultados_caracterizador/80-39.txt
 Resultados_caracterizador/80-40.txt
 127,819,281,231,184,999,
 Resultados_caracterizador/8-0.txt
+127,1569,281,255,209,1011,
 Resultados_caracterizador/90-25.txt
 118,183,196,198,106,920,
 Resultados_caracterizador/90-26.txt
@@ -236,5 +239,7 @@ Resultados_caracterizador/90-44.txt
 Resultados_caracterizador/90-45.txt
 124,612,278,232,162,993,
 Resultados_caracterizador/9-0.txt
+127,1515,281,255,209,1011,
 Resultados_caracterizador/Archivos.txt
+Resultados_caracterizador/Calculo_coberturas_corregido.txt
 Resultados_caracterizador/Calculo_coverturas.txt
