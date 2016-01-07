@@ -1,13 +1,18 @@
-;(load "Caracterizador_nuevo.lisp")
-;(load "Script_caracterizador.lisp")
+;;;Estas líneas es para el script de coberturas. Será necesario comentarlas
+;;;cuando ya no se usen.
+(load "Caracterizador_nuevo.lisp")
+(load "Script_caracterizador_de_piezas.lisp")
+(defvar *archivo_propiedades* (nth 1 *posix-argv*))
+(defvar *ap* (read-from-string (nth 2 *posix-argv*)))
+(defvar *bp* (read-from-string (nth 3 *posix-argv*)))
+(defvar *bn* (read-from-string (nth 2 *posix-argv*)))
+(defvar *an* (read-from-string (nth 3 *posix-argv*)))
+;;;
+
 ;En este archivo se incluyen las funciones para determinar la cobertura de las
 ;características encontradas.
 
-;Empecemos con los parámetros:
-(defparameter *ap* 100)
-(defparameter *bp* 36)
-(defparameter *an* 36)
-(defparameter *bn* 100)
+;;Empecemos con los parámetros:
 (defparameter *g* 100)
 
 (defun comparacion_con_mascara (patron mascara segmento)
@@ -95,7 +100,22 @@
                   (length (nth indice grupos)) 
                   (/ (length (aref conjuntos indice)) (length (nth indice grupos)) 0.01)))))
 
-;;;;Estas líneas es para el script de coberturas. Será necesario comentarlas
-;;;;cuando ya no se usen.
-;(defvar *archivo_propiedades* (nth 1 *posix-argv*))
-;(cobertura_positivas *supervision* *archivo_propiedades*)
+(defun cobertura_positivas_csv (grupos archivo)
+  ;Determina la cobertura de las características positivas que se encuentren.
+  (let ((num_patrones)(renglon)(conjuntos (make-array (length grupos) :initial-element nil))(patrones_encontrados) (indice_grupo))
+    (with-open-file (stream archivo)
+      (setq num_patrones (read stream nil nil))
+      (read-line stream nil nil)                   ;Para saltarse la línea de comentarios
+      (loop for k from 0 below num_patrones do
+            (setq renglon (revisa_lista_tiene_positivas (read-from-string (read-line stream nil nil))))
+            (cond
+              (renglon 
+                (loop for elemento in (rest renglon) do
+                      (setq indice_grupo (second elemento))
+                      (setq patrones_encontrados (indices_patrones (nth indice_grupo grupos) (first renglon) (first elemento)))
+                      (setf (aref conjuntos indice_grupo) (union (aref conjuntos indice_grupo) patrones_encontrados)))))))
+    (loop for indice from 0 below (length conjuntos) do 
+          (format t "~S," (length (aref conjuntos indice))))
+    (format t "~%")))
+
+(cobertura_positivas_csv *supervision* *archivo_propiedades*)
