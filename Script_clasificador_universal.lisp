@@ -212,6 +212,9 @@
   ((equal nombre_archivo "Resultados_caracterizador/60-30.txt")
    (defparameter *conteo_caracteristicas*
      (list (list 1899 22)(list 33 1)(list 1215 0)(list 372 5)(list 236 8)(list 1382 233))))
+  ((equal nombre_archivo "Resultados_caracterizador/6-0.txt")
+   (defparameter *conteo_caracteristicas*
+     (list (list 386931 4826)(list 7280 2)(list 49503 1142)(list 53694 1788)(list 58912 2065)(list 30492 1508))))
   ((equal nombre_archivo "Resultados_caracterizador/70-25.txt")
    (defparameter *conteo_caracteristicas*
      (list (list 988 13)(list 11 0)(list 330 0)(list 223 5)(list 129 1)(list 689 153))))
@@ -245,6 +248,9 @@
   ((equal nombre_archivo "Resultados_caracterizador/70-35.txt")
    (defparameter *conteo_caracteristicas*
      (list (list 1285 14)(list 25 15)(list 984 0)(list 312 10)(list 181 2)(list 1011 223))))
+  ((equal nombre_archivo "Resultados_caracterizador/7-0.txt")
+   (defparameter *conteo_caracteristicas*
+     (list (list 386931 4292)(list 3173 2)(list 49503 862)(list 53694 1482)(list 58912 1572)(list 19464 1405))))
   ((equal nombre_archivo "Resultados_caracterizador/80-25.txt")
    (defparameter *conteo_caracteristicas*
      (list (list 490 3)(list 4 0)(list 114 0)(list 159 0)(list 85 0)(list 417 111))))
@@ -293,6 +299,9 @@
   ((equal nombre_archivo "Resultados_caracterizador/80-40.txt")
    (defparameter *conteo_caracteristicas*
      (list (list 726 3)(list 20 25)(list 662 0)(list 240 0)(list 136 1)(list 703 199))))
+  ((equal nombre_archivo "Resultados_caracterizador/8-0.txt")
+   (defparameter *conteo_caracteristicas*
+     (list (list 386931 3340)(list 1613 2)(list 14114 645)(list 53694 1099)(list 58912 1030)(list 13084 1159))))
   ((equal nombre_archivo "Resultados_caracterizador/90-25.txt")
    (defparameter *conteo_caracteristicas*
      (list (list 282 2)(list 2 0)(list 71 0)(list 132 0)(list 62 0)(list 252 90))))
@@ -356,6 +365,9 @@
   ((equal nombre_archivo "Resultados_caracterizador/90-45.txt")
    (defparameter *conteo_caracteristicas*
      (list (list 490 2)(list 15 27)(list 518 0)(list 213 0)(list 102 0)(list 448 184))))
+  ((equal nombre_archivo "Resultados_caracterizador/9-0.txt")
+   (defparameter *conteo_caracteristicas*
+     (list (list 15012 2546)(list 1168 0)(list 14114 286)(list 10323 723)(list 58912 491)(list 9058 584))))
   ((equal nombre_archivo "Resultados_caracterizador/Archivos.txt")
    (defparameter *conteo_caracteristicas*
      (list (list 0 0)(list 0 0)(list 0 0)(list 0 0)(list 0 0)(list 0 0))))
