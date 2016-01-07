@@ -1,7 +1,7 @@
 ;;;Estas líneas es para el script de coberturas. Será necesario comentarlas
 ;;;cuando ya no se usen.
 (load "Caracterizador_nuevo.lisp")
-(load "Script_caracterizador_de_piezas.lisp")
+(load "Script_caracterizador.lisp")
 (defvar *archivo_propiedades* (nth 1 *posix-argv*))
 (defvar *ap* (read-from-string (nth 2 *posix-argv*)))
 (defvar *bp* (read-from-string (nth 3 *posix-argv*)))
