@@ -52,7 +52,22 @@
             (t nil)))
     salida))
 
-(defun resta_ (argumentos)
-;Descripción
-  
-  )
+(defun rasgos_empleados (archivo indice)
+  ;Del archivo de características, revisa que rasgos se están considerando en una
+  ;clase.
+  (let ((num_total_propiedades) 
+        (renglon) 
+        (conjunto_indices (make-array 40)) ;Hard-coded para este conjunto de datos
+        (tipo))
+    (with-open-file (stream archivo)
+      (setq num_total_propiedades (read stream nil nil))
+      (read-line stream nil nil)                   ;Para saltarse la línea de comentarios
+      (loop for i from 0 below num_total_propiedades do
+            (setq renglon (read-from-string (read-line stream nil nil)))
+            (setq tipo (nth 2 (nth 1 renglon)))
+            (cond
+              ((and (equal '+ (second tipo)) (= indice (first tipo))) ;Si es una propiedad positiva
+               (loop for k across (first renglon) do
+                     (incrementa_indice conjunto_indices k)))
+              (t ))))
+    conjunto_indices))
