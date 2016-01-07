@@ -1,13 +1,13 @@
 ;;;Estas líneas es para el script de coberturas. Será necesario comentarlas
 ;;;cuando ya no se usen.
-(load "Caracterizador_nuevo.lisp")
-(load "Script_caracterizador.lisp")
-(defvar *archivo_propiedades* (nth 1 *posix-argv*))
-(defvar *ap* (read-from-string (nth 2 *posix-argv*)))
-(defvar *bp* (read-from-string (nth 3 *posix-argv*)))
-(defvar *bn* (read-from-string (nth 2 *posix-argv*)))
-(defvar *an* (read-from-string (nth 3 *posix-argv*)))
-;;;
+;(load "Caracterizador_nuevo.lisp")
+;(load "Script_caracterizador.lisp")
+;(defvar *archivo_propiedades* (nth 1 *posix-argv*))
+;(defvar *ap* (read-from-string (nth 2 *posix-argv*)))
+;(defvar *bp* (read-from-string (nth 3 *posix-argv*)))
+;(defvar *bn* (read-from-string (nth 2 *posix-argv*)))
+;(defvar *an* (read-from-string (nth 3 *posix-argv*)))
+;;;;
 
 ;En este archivo se incluyen las funciones para determinar la cobertura de las
 ;características encontradas.
@@ -118,4 +118,4 @@
           (format t "~S," (length (aref conjuntos indice))))
     (format t "~%")))
 
-(cobertura_positivas_csv *supervision* *archivo_propiedades*)
+;(cobertura_positivas_csv *supervision* *archivo_propiedades*)
