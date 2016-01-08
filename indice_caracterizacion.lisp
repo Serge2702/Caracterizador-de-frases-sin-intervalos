@@ -1,6 +1,11 @@
 ;;; Este archivo contiene la información necesaria para calcular el "índice de
 ;;; caracterización" de un archivo de propiedades.
 
+(defun normaliza_arreglo (arreglo) 
+  ;Normaliza un arreglo dividiéndolo entre su valor máximo
+  (coerce (let ((maximo (apply #'max (coerce arreglo 'list))))
+     (mapcar #'(lambda (x) (/ x maximo 1.0))(coerce arreglo 'list))) 'vector))
+
 (defun contar_tipos_propiedades (conjunto)
   ;Cuenta cuantas propiedades positivas y negativas hay en el archivo. Esto lo
   ;hace por clase. La salida es un arreglo de dos dimensiones. Cada "fila" es
@@ -70,7 +75,7 @@
                (loop for k across (first renglon) do
                      (incrementa_indice conjunto_indices k)))
               (t ))))
-    conjunto_indices))
+    (normaliza_arreglo conjunto_indices)))
 
 (defun suma_conteos_ocurrencias_una_clase (archivo indice)
   ;Toma el archivo de propiedades y suma los conteos de ocurrencia de cada
@@ -123,3 +128,4 @@
   ;Regresa el índice de caracterización de cada clase
   (loop for k in (suma_conteos_ocurrencias archivo) collect 
         (map 'vector #'/ k *patrones_por_clase*)))
+
