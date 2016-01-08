@@ -71,3 +71,55 @@
                      (incrementa_indice conjunto_indices k)))
               (t ))))
     conjunto_indices))
+
+(defun suma_conteos_ocurrencias_una_clase (archivo indice)
+  ;Toma el archivo de propiedades y suma los conteos de ocurrencia de cada
+  ;propiedad en una clase.
+  (let ((num_total_propiedades) 
+        (renglon) 
+        (tipo)
+        (suma_total 0))
+    (with-open-file (stream archivo)
+      (setq num_total_propiedades (read stream nil nil))
+      (read-line stream nil nil)                   ;Para saltarse la línea de comentarios
+      (loop for i from 0 below num_total_propiedades do
+            (setq renglon (read-from-string (read-line stream nil nil)))
+            (setq tipo (nth 2 (nth 1 renglon)))
+            (cond
+              ((and (equal '+ (second tipo)) (= indice (first tipo))) ;Si es una propiedad positiva
+               (setq suma_total (+ suma_total (aref (nth 1 (nth 1 renglon)) indice))))
+              (t ))))
+    suma_total))
+
+(defun average (&rest numeros)
+;Calcula el promedio de una seria de números
+  (/ (apply #'+ numeros) (length numeros) 1.0))
+
+(defparameter *patrones_por_clase* #(127.0 1635.0 281.0 255.0 209.0 1011.0))
+
+(defun suma_conteos_ocurrencias (archivo)
+  ;Toma el archivo de propiedades y suma los conteos de ocurrencia de cada
+  ;propiedad en una clase.
+  (let ((num_total_propiedades) 
+        (renglon) 
+        (tipo)
+        (suma_total_+ (make-array 6))
+        (suma_total_- (make-array 6))) ;Hard-coded para este conjunto de datos
+    (with-open-file (stream archivo)
+      (setq num_total_propiedades (read stream nil nil))
+      (read-line stream nil nil)                   ;Para saltarse la línea de comentarios
+      (loop for i from 0 below num_total_propiedades do
+            (setq renglon (read-from-string (read-line stream nil nil)))
+            (setq tipo (nth 2 (nth 1 renglon)))
+            (cond
+              ((equal '+ (second tipo)) ;Si es una propiedad positiva
+               (incf (aref suma_total_+ (first tipo)) (aref (nth 1 (nth 1 renglon)) (first tipo))))
+              ((equal '- (second tipo)) ;Si es una propiedad positiva
+               (incf (aref suma_total_- (first tipo)) (apply #'max (coerce (nth 1 (nth 1 renglon)) 'list ) )))
+              (t ))))
+    (list suma_total_+ suma_total_-)))
+
+(defun indice_de_caracterizacion (archivo)
+  ;Regresa el índice de caracterización de cada clase
+  (loop for k in (suma_conteos_ocurrencias archivo) collect 
+        (map 'vector #'/ k *patrones_por_clase*)))
