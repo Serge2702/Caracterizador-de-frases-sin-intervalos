@@ -1,6 +1,8 @@
 ;;; Este archivo contiene la información necesaria para calcular el "índice de
 ;;; caracterización" de un archivo de propiedades.
 
+(load "Caracterizador_nuevo.lisp")
+
 (defun normaliza_arreglo (arreglo) 
   ;Normaliza un arreglo dividiéndolo entre su valor máximo
   (coerce (let ((maximo (apply #'max (coerce arreglo 'list))))
@@ -128,3 +130,8 @@
   ;Regresa el índice de caracterización de cada clase
   (loop for k in (suma_conteos_ocurrencias archivo) collect 
         (map 'vector #'/ k *patrones_por_clase*)))
+
+;;;Esto es para calcular automáticamente el indice de caracterización en forma
+;;;de script.
+
+(indice_de_caracterizacion (nth 1 *posix-argv*))
