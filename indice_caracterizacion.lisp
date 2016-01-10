@@ -128,4 +128,3 @@
   ;Regresa el índice de caracterización de cada clase
   (loop for k in (suma_conteos_ocurrencias archivo) collect 
         (map 'vector #'/ k *patrones_por_clase*)))
-
