@@ -1,0 +1,4 @@
+Resultados_caracterizador/10-0.txt
+50,1629,49,135,114,1010,
+Resultados_caracterizador/5-0.txt
+83,1635,221,230,191,1011,
