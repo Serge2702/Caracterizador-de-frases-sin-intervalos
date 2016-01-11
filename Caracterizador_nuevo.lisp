@@ -331,7 +331,7 @@
              (setq fraccion (+ fraccion decimo)))
             (t ))
           (setq tabla (tabla_repeticiones lista_grupos mascara))
-          (normaliza_tabla tabla sizes)
+          ;(normaliza_tabla tabla sizes)
           (limpia_tabla_nuevo tabla alpha+ beta+ alpha- beta- gamma)
           (cond
             ((< 0 (hash-table-count tabla)) 
