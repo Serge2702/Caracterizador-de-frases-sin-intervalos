@@ -1,0 +1,7 @@
+Resultados_caracterizador/10-0.txt
+
+(#(6.866142 37.1211 3.0 11.360785 4.6507177 85.546)
+ #(244.46457 0.0 0.0 10.6470585 11.564593 0.97230464)) Resultados_caracterizador/5-0.txt
+
+(#(21.15748 245.4685 29.398577 71.33726 18.60287 353.67853)
+ #(808.4488 0.0 7.24911 53.039215 53.598087 2.6904056)) Resultados_caracterizador/Calculo_coberturas_corregido.txt
